@@ -17,13 +17,28 @@ If you are developing a production application, we recommend using TypeScript wi
   . npm create vite@latest
   . npm create vite@latest netflix-gpt -- --template react
 - Configured tailwind css
+- Header
+- Routing of App
+- Login Form
+- Sign up Form
+- Form Validation
+- useRef Hook
+- Firebase Setup
+- Deploy our app to production
+- create Sign up user account using firebase
+- Implement Sign In user Api
+- Created Redux store with userSlice
+- Implemented Sign out 
+- Update profile api call
+
+
 
 # Features
 
 - Login/Sign Up
   -Sign In / SignUP Form
 
-  - redirect t browse page
+  - redirect to browse page
 
 - Browse (after authentication)
   - Header
@@ -32,8 +47,6 @@ If you are developing a production application, we recommend using TypeScript wi
     - Title & Description
     - Movie Suggestions
       - Movie List \* N
-
--NetflixGPT
-
-- Search Bar
-- Movie Suggestions
+  -NetflixGPT
+    - Search Bar
+    - Movie Suggestions
