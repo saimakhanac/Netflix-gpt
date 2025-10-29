@@ -1,13 +1,14 @@
-import { signOut } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import logo from "../../public/icons8-netflix.svg";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { removeUser } from "../utils/userSlice";
+import { addUser, removeUser } from "../utils/userSlice";
+import { useEffect } from "react";
 const Header = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
-  const dispatch = useDispatch();
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -20,6 +21,22 @@ const Header = () => {
         // An error happened.
       });
   };
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const { uid, email, displayName, photoURL } = user;
+        dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
+        navigate("/browse");
+      } else {
+        dispatch(removeUser());
+        navigate("/");
+      }
+    });
+    // unsubscribe when component unmounts
+    return () => unsubscribe();
+
+
+  }, []);
   return (
     <div className="absolute w-screen px-8 z-10 bg-gradient-to-b from-black flex justify-between">
       <img src={logo} alt="logo" />
