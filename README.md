@@ -44,8 +44,12 @@ If you are developing a production application, we recommend using TypeScript wi
 - update store with traier video data
 - embbeded the youtube video and make it autoplay and mute
 - tailwind classes for main container
-
 - build secondary container 
+- build movie list
+- build movie card
+- TMDB Image CDN URL
+- Made the browse page with tailwind css 
+- usePopularMovie, useTopRatedMovie custom hook
 
 
 # Features
