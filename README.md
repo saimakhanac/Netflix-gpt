@@ -50,6 +50,10 @@ If you are developing a production application, we recommend using TypeScript wi
 - TMDB Image CDN URL
 - Made the browse page with tailwind css 
 - usePopularMovie, useTopRatedMovie custom hook
+-last
+-GPT Search Fage
+- GPT Search Bar
+- Multi-language * feature in our app
 
 
 # Features

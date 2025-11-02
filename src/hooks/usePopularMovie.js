@@ -11,8 +11,6 @@ const usePopularMovie = () => {
         API_OPTIONS
       );
       const json = await data.json();
-      console.log(json.results,"ioioio")
-      console.log(json.results.map(movie=>movie.video));
       dispatch(addPopularMovies(json.results));
     };
     useEffect(() => {

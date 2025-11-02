@@ -11,7 +11,7 @@ import {
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { USER_AVATAR } from "../utils/constants";
+import { BG_URL, USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [showpara, setShowpara] = useState(false);
@@ -29,9 +29,7 @@ const Login = () => {
       password.current.value
       // name.current.value
     );
-    // console.log(email.current.value);
-    // console.log(password.current.value);
-    // console.log(message);
+
     setError(message);
     if (message) return;
     // Sign In Sign Up Logic
@@ -58,8 +56,6 @@ const Login = () => {
               // ...
             });
 
-          console.log(user);
-
           // ...
         })
         .catch((error) => {
@@ -73,7 +69,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          // console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -91,7 +86,7 @@ const Login = () => {
       <Header />
       <div className="absolute lg:block hidden">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/8d617e19-3c3c-4c28-8998-c9b14dbc7200/web/IN-en-20250901-TRIFECTA-perspective_48d84d4e-9558-46b8-a0f3-8b2dc8478431_large.jpg"
+          src={BG_URL}
           alt="bg"
         />
       </div>
