@@ -8,7 +8,7 @@ const GptSearch = () => {
       <div className="fixed -z-10">
         <img src={BG_URL} alt="bg" className="h-screen object-cover md:h-auto md:object-none" />
       </div>
-      <div className="pt-[45%] md:pt-[0%]">
+      <div className="pt-[44%] lg:pt-[1%] md:pt-[10%]">
         {/* Gpt Search Bar */}
         <GptSearchBar />
 
