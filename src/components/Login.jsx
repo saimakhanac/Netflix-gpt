@@ -84,11 +84,8 @@ const Login = () => {
   return (
     <div className="relative h-screen w-full">
       <Header />
-      <div className="absolute lg:block hidden">
-        <img
-          src={BG_URL}
-          alt="bg"
-        />
+      <div className="-z-10">
+        <img src={BG_URL} alt="bg" className="h-screen object-cover md:h-auto md:object-none" />
       </div>
       {/* Overlay for dark effect */}
       {/* <div className="absolute top-0 left-0 w-full h-full bg-black/60"></div> */}

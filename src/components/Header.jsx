@@ -49,8 +49,8 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-screen px-8 z-10 bg-gradient-to-b from-black flex justify-between">
-      <img src={logo} alt="logo" />
+    <div className="absolute w-screen px-8 z-10 bg-gradient-to-b from-black flex flex-col md:flex-row justify-between">
+      <img src={logo} alt="logo" className=" w-30 md:w-44 mx-auto md:mx-0" />
       {user && (
         <div className="flex items-center justify-between">
           {showGptSearchButton && (
@@ -66,10 +66,12 @@ const Header = () => {
             onClick={handleGptSearchClick}>
             {showGptSearchButton ? "Homepage" : "GPT Search"}
           </button>
+          <div className="flex justify-between">
           <img src={USER_AVATAR} alt="userIcon" className="w-12 h-12" />
           <button onClick={handleSignOut} className="px-2 text-white font-bold">
             (Sign Out)
           </button>
+          </div>
         </div>
       )}
     </div>

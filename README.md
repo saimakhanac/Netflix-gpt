@@ -54,6 +54,15 @@ If you are developing a production application, we recommend using TypeScript wi
 -GPT Search Fage
 - GPT Search Bar
 - Multi-language * feature in our app
+- GPT Open AI APi key - it was paid so done google gemini key
+- GPT Search API call
+- fetched gptmoviesuggestion from TMDB
+- created gptSlice added data
+- reused movielist component to make movie suggesstion container
+- memoization 
+- added .env file
+- adding .env file to gitignore
+- made the ui responsive
 
 
 # Features
