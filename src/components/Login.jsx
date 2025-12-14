@@ -116,7 +116,10 @@ const Login = () => {
             className="px-3 py-4 w-full my-2 border-1 border-solid border-gray-400 rounded-sm"
           />
           <p className="text-red-600 font-bold text-lg py-2">{error}</p>
-          <button onClick={handleButton} className="py-2 my-4 bg-red-600 w-full font-bold    ">
+          <button
+            onClick={handleButton}
+            className="py-2 my-4 bg-red-600 w-full font-bold"
+            type="button">
             {signin ? "Sign In" : "Sign Up"}
           </button>
           <h1 className="flex justify-center">OR</h1>
