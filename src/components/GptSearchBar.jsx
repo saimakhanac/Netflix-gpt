@@ -19,7 +19,7 @@ const GptSearchBar = () => {
       API_OPTIONS
     );
     const json = await data.json();
-    console.log(json);
+    console.log("testing",json);
     return json.results;
   };
 
@@ -36,7 +36,7 @@ const GptSearchBar = () => {
     //   messages: [{ role: "user", content: gptQuery }],
     // });
     // console.log(gptResults.choices[0].message.content, "gpt");
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const prompt = gptQuery; // same query you already have
 
